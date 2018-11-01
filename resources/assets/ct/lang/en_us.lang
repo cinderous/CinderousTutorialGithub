@@ -1,3 +1,10 @@
 item.ingot_cinderous.name=Cinderous Ingot
 
 tile.block_cinderous.name=Cinderous Block
+
+tile.plant_spice_cinderous.name=Cinderous Spice Plant
+
+item.seed_spice_cinderous.name=Cinderous Spice Seed
+item.spice_cinderous.name=Cinderous Spice
+
+itemGroup.cinderoustab=Cinderous Tutorial

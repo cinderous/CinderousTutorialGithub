@@ -2,5 +2,6 @@
     "variants": 
     {
         "normal": { "model": "ct:block_cinderous" }
+        
     }
 }
