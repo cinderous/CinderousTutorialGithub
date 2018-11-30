@@ -1,7 +1,8 @@
-package com.cinderous.cinderoustutorial.objects.items.food;
+/* package com.cinderous.cinderoustutorial.objects.items.food;
 
 import com.cinderous.cinderoustutorial.Main;
 import com.cinderous.cinderoustutorial.init.BlockInit;
+import com.cinderous.cinderoustutorial.init.ItemInit;
 import com.cinderous.cinderoustutorial.util.IHasModel;
 
 import net.minecraft.block.state.IBlockState;
@@ -20,22 +21,25 @@ import net.minecraftforge.common.IPlantable;
 
 public class ItemSeed extends ItemFood implements IHasModel, IPlantable {
 
-	public ItemSeed(String name, int amount, boolean isWolfFood) {
+	public ItemSeed(String name, int amount, boolean isWolfFood) 
+	{
 		super(amount, isWolfFood);
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(Main.cinderoustab);
-	}
-
-	@Override
-	public void registerModels() {
-		Main.proxy.registerItemRenderer(this, 0, "inventory");
 		
+		ItemInit.ITEMS.add(this);
 	}
 	
 	@Override
-	public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand,
-			EnumFacing facing, float hitX, float hitY, float hitZ) {
+	public void registerModels()
+	{
+		Main.proxy.registerItemRenderer(this, 0, "inventory");
+	}
+
+	@Override
+	public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) 
+	{
 		ItemStack stack = player.getHeldItem(hand);
 		IBlockState state = worldIn.getBlockState(pos);
 		if(facing == EnumFacing.UP && player.canPlayerEdit(pos.offset(facing), facing, stack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up()))
@@ -48,15 +52,17 @@ public class ItemSeed extends ItemFood implements IHasModel, IPlantable {
 		else return EnumActionResult.FAIL;
 	}
 	
-
-
 	@Override
-	public EnumPlantType getPlantType(IBlockAccess world, BlockPos pos) {
+	public EnumPlantType getPlantType(IBlockAccess world, BlockPos pos) 
+	{
 		return EnumPlantType.Crop;
 	}
 
 	@Override
-	public IBlockState getPlant(IBlockAccess world, BlockPos pos) {
+	public IBlockState getPlant(IBlockAccess world, BlockPos pos)
+	{
 		return BlockInit.PLANT_SPICE_CINDEROUS.getDefaultState();
 	}
 }
+
+*/

@@ -1,4 +1,4 @@
-package com.cinderous.cinderoustutorial.objects.blocks;
+/* package com.cinderous.cinderoustutorial.objects.blocks;
 
 import com.cinderous.cinderoustutorial.init.BlockInit;
 import com.cinderous.cinderoustutorial.init.ItemInit;
@@ -61,3 +61,5 @@ public class BlockPlantSpiceCinderous extends BlockCrops {
 		return spice[((Integer)state.getValue(this.getAgeProperty())).intValue()];
 	}
 }
+
+*/

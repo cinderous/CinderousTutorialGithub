@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "ct:blocks/plant_spice_cinderous_stage_7"
+    }
+}

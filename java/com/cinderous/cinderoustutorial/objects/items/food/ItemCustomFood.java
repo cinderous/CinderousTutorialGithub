@@ -1,6 +1,7 @@
 package com.cinderous.cinderoustutorial.objects.items.food;
 
 import com.cinderous.cinderoustutorial.Main;
+import com.cinderous.cinderoustutorial.init.ItemInit;
 import com.cinderous.cinderoustutorial.util.IHasModel;
 
 import net.minecraft.item.Item;
@@ -13,6 +14,8 @@ public class ItemCustomFood extends ItemFood implements IHasModel {
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(Main.cinderoustab);
+		
+		ItemInit.ITEMS.add(this);
 	}
 
 	@Override
